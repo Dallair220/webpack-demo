@@ -1,11 +1,10 @@
-import myName from './myName.js';
-import { functionOne } from './myModule.js';
+import _ from 'lodash';
 
 function component() {
   const element = document.createElement('div');
 
-  element.textContent = myName('paul');
-  console.log(functionOne());
+  element.innerHTML = _.join(['Hello', 'webpack'], ' ');
+
   return element;
 }
 
